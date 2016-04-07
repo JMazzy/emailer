@@ -31,6 +31,11 @@ jmail.config(['$urlRouterProvider', '$stateProvider',
       templateUrl: 'templates/email.html',
       controller: 'EmailCtrl',
     })
+    .state('jmail.compose', {
+      url: 'compose',
+      templateUrl: 'templates/compose.html',
+      controller: 'ComposeCtrl',
+    })
 
     $urlRouterProvider.otherwise('inbox');
 

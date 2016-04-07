@@ -8,7 +8,7 @@ jmail.controller( 'EmailCtrl', ['$scope', '$state', '$stateParams', 'Restangular
 
   $scope.email = $scope.emailData.getCurrentEmail();
 
-  $scope.reply = $scope.emailData.getReply();
+  $scope.newEmail = $scope.emailData.getReply();
 
   $scope.closeEmail = function() {
     $state.go("jmail.inbox");

@@ -4,10 +4,10 @@ jmail.factory('EmailService', [ 'Restangular', function(Restangular) {
   var _emailData = {
     emails: null,
     currentEmail: null,
-    reply: { from: null, to: null, subject: null, body: null, time: null },
+    newEmail: { from: null, to: null, subject: null, body: null, time: null },
     requestEmails: function() {
-      // var rawEmails = Restangular.all('emails').get().$object;
-      var rawEmails = fake_emails;
+      var rawEmails = Restangular.all('emails').getList().$object;
+      // var rawEmails = fake_emails;
       var emails = [];
       for ( var i = 0; i < rawEmails.length; i++ ) {
         emails[i] = {
@@ -38,11 +38,11 @@ jmail.factory('EmailService', [ 'Restangular', function(Restangular) {
         }
       }
     },
-    getReply: function() {
-      return this.reply;
+    getNewEmail: function() {
+      return this.newEmail;
     },
-    resetReply: function() {
-      this.reply = { id: 0, from: "Me", to: null, subject: null, body: null, time: null };
+    resetNewEmail: function() {
+      this.newEmail = { id: 0, from: "Me", to: null, subject: null, body: null, time: null };
     },
   };
 
@@ -51,7 +51,7 @@ jmail.factory('EmailService', [ 'Restangular', function(Restangular) {
   };
 
   obj.sendEmail = function() {
-    Restangular.all("emails").post(_emailData.reply)
+    Restangular.all("emails").post(_emailData.newEmail)
     .then( function( responseEmail ) {
       console.log( responseEmail );
     }, function( error ) {
