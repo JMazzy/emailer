@@ -22,7 +22,7 @@ class GmailAPI
     emails_obj.each do |email|
       obj = {
         from: email.from[0].name,
-        from_email: email.from[0]["mailbox"] + email.from[0]["host"],
+        from_email: email.from[0]["mailbox"] + "@" + email.from[0]["host"],
         subject: email.subject,
         body: email.body.parts[0],
         date: email.date
