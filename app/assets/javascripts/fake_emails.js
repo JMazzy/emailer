@@ -4,29 +4,32 @@ var fakeEmails = [
     to: "Fake Recipient",
     subject:"Fake Subject",
     body: "Fake Body",
-    time: new Date(2016, 1, 1, 5, 5) },
+    time: new Date(2016, 1, 5, 5, 55) },
   { id: 542,
     from: "Fake Sender",
     to: "Fake Recipient",
     subject:"Fake Subject",
     body: "Fake Body",
-    time: new Date(2016, 1, 1, 4, 4)},
+    time: new Date(2016, 1, 4, 4, 44)},
   { id: 541,
     from: "Fake Sender",
     to: "Fake Recipient",
     subject:"Fake Subject",
     body: "Fake Body",
-    time: new Date(2016, 1, 1, 3, 3)},
+    time: new Date(2016, 1, 3, 3, 33)},
   { id: 540,
     from: "Fake Sender",
     to: "Fake Recipient",
     subject:"Fake Subject",
     body: "Fake Body",
-    time: new Date(2016, 1, 1, 2, 2)},
+    time: new Date(2016, 1, 2, 2, 22)},
   { id: 539,
     from: "Fake Sender",
     to: "Fake Recipient",
     subject:"Fake Subject",
     body: "Fake Body",
-    time: new Date(2016, 1, 1, 1, 1)}
+    time: new Date(2016, 1, 1, 1, 11)}
 ];
+
+
+// {"from":"John Lepre","subject":"36 hours in San Francisco - NY Times video","body":"FYI\r\n\r\nHope all is well\r\n\r\n\r\n=\r\nhttp://www.nytimes.com/video/travel/100000003980684/36-hours-in-san-franci=\r\nsco.html=\r\n","date":"Thu, 29 Oct 2015 07:45:51 -0700"}
