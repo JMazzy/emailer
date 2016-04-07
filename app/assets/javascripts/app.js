@@ -1,8 +1,5 @@
 var jmail = angular.module('jmail', [ 'ui.router',
-                                        'restangular',
-                                        'Devise',
-                                        'xeditable',
-                                        'angularModalService']);
+                                        'restangular']);
 
 jmail.factory('_', ['$window', function($window) {
   return $window._; // assumes underscore has already been loaded on the page
@@ -30,6 +27,6 @@ jmail.config(['$urlRouterProvider', '$stateProvider',
       controller: 'EmailCtrl'
     })
 
-    $urlRouterProvider.otherwise('jmail.inbox');
+    $urlRouterProvider.otherwise('inbox');
 
   }]);
