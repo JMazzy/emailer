@@ -2,13 +2,25 @@ jmail.factory('EmailService', [ 'Restangular', function(Restangular) {
   var obj = {};
 
   var _emailData = {
-    emails: fakeEmails,
+    emails: null,
     currentEmail: null,
-    reply: { id: 544, from: "Me", to: null, subject: null, body: null, time: null },
+    reply: { from: null, to: null, subject: null, body: null, time: null },
     requestEmails: function() {
-      this.emails = Restangular.all('emails')
-      .get()
-      .$object;
+      // var rawEmails = Restangular.all('emails').get().$object;
+      var rawEmails = fake_emails;
+      var emails = [];
+      for ( var i = 0; i < rawEmails.length; i++ ) {
+        emails[i] = {
+          id: i,
+          from: rawEmails[i].from,
+          from_email: rawEmails[i].from_email,
+          to: null,
+          subject: rawEmails[i].subject,
+          body: rawEmails[i].body.body_raw,
+          date: new Date(rawEmails[i].date),
+        };
+      }
+      this.emails = emails;
     },
     getEmails: function() {
       return this.emails;
