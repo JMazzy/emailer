@@ -8,18 +8,11 @@ class EmailsController < ApplicationController
 
 
   def create
-    @email = Email.create(email_params)
-    
+    @gmail = GmailAPI.new
+    @gmail.send_email(params)
   end
 
-
-
-
-  private
-
-  def email_params
-    params.require(:email).permit(:to, :subject, :body)
-  end
+ # "email"=>{"to"=>"you", "subject"=>"board", "description"=>"board"}
 
 
 

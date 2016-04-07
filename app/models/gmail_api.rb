@@ -19,12 +19,13 @@ class GmailAPI
   def grab_all_unread
     @arr = []
     @email_objects = []
-    @emails = @gmail.inbox.emails.find(:unread)
+    @emails = @gmail.inbox.emails(:from => "julia.herron@gmail.com")
     @emails.each do |email|
       obj = {
         from: email.from[0].name,
+        from_email: email.from[0]["mailbox"] + email.from[0]["host"],
         subject: email.subject,
-        body: email.body.raw_source,
+        body: email.body.parts[0],
         date: email.date
       }
       @email_objects << obj
@@ -38,12 +39,12 @@ class GmailAPI
   end
 
 
-  def send_email(to, subject, body)
+  def send_email(object)
     @gmail.deliver do
-      to "#{to}"
-      subject "#{subject}"
+      to "#{object.to}"
+      subject "#{object.subject}"
       text_part do
-        body "#{body}"
+        body "#{object.body}"
       end
     end
   end
