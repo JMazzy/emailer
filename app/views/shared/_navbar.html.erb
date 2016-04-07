@@ -6,6 +6,10 @@
       <div class="nav navbar-nav navbar-right">
         <div class="navbar-text">
           <% if current_user %>
+            <div id="sign_out">
+              Signed in as <strong><%= current_user.name %></strong>
+              <%= link_to "Sign out", signout_path %>
+            </div>
             Signed in as <strong><%= current_user.name %></strong> | 
             <span><%= link_to "Sign out", signout_path, id: "sign_out" %></span>
           <% else %>
