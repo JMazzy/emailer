@@ -6,8 +6,13 @@ Rails.application.routes.draw do
   resources :sessions, only: [:create, :destroy]
   resource :home, only: [:show], controller: "home"
   resources :static_pages, only: [:index]
-  resources :emails do
-    get :search
+  
+  scope :api do
+    scope :v1 do
+      resources :emails do
+        get :search
+      end
+    end
   end
 
   root "static_pages#index"
