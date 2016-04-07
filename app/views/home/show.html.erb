@@ -1,2 +1,14 @@
-<h1>Home#show</h1>
-<p>Find me in app/views/home/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+
+      <h1 class="text-center">Welcome to J-mail</h1><br/><br/>
+      <h5>Are you tired of logging into multiple email accounts?</h5>
+      <h5>Now you can view all your emails from one convenient inbox!</h5><br/><br/>
+      <div class="text-center">
+      <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in", class: "btn btn-default" %>
+      </div>
+
+    </div>
+  </div>
+</div>

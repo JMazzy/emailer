@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-sprockets
 //= require angular
 //= require angular-ui-router.min.js
 //= require restangular.min.js
