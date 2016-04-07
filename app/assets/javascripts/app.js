@@ -24,7 +24,12 @@ jmail.config(['$urlRouterProvider', '$stateProvider',
     .state('jmail.inbox', {
       url: 'inbox',
       templateUrl: 'templates/inbox.html',
-      controller: 'EmailCtrl'
+      controller: 'InboxCtrl',
+    })
+    .state('jmail.email', {
+      url: 'email/:id',
+      templateUrl: 'templates/email.html',
+      controller: 'EmailCtrl',
     })
 
     $urlRouterProvider.otherwise('inbox');

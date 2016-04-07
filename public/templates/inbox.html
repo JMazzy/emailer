@@ -17,7 +17,7 @@
       </thead>
 
       <tbody>
-        <tr mail-directive ng-repeat="email in emails"></tr>
+        <tr mail-directive ng-repeat="email in emails" email="email" ng-click="openEmail(email)" class="email"></tr>
       </tbody>
 
     </table>
