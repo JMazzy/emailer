@@ -7,7 +7,7 @@ class GmailAPI
     @gmail = Gmail.connect!(ENV["gmail_address"], ENV["gmail_password"])
     # @gmail = Gmail.connect!(:xoauth2, current_user.email, current_user.oauth_token)
 
-    # breakme
+    # breakhere
   end
 
 
@@ -35,16 +35,6 @@ class GmailAPI
 
   def logout_of_gmail
     @gmail.logout
-  end
-
-
-  def user_logged_in?
-    @gmail.logged_in?
-  end
-
-
-  def get_email_count
-    @gmail.inbox.count
   end
 
 

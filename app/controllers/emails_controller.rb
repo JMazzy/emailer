@@ -7,5 +7,20 @@ class EmailsController < ApplicationController
   end
 
 
+  def create
+    @email = Email.create(email_params)
+    
+  end
+
+
+
+
+  private
+
+  def email_params
+    params.require(:email).permit(:to, :subject, :body)
+  end
+
+
 
 end
