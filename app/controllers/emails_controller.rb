@@ -15,5 +15,11 @@ class EmailsController < ApplicationController
  # "email"=>{"to"=>"you", "subject"=>"board", "description"=>"board"}
 
 
+  def search
+    @gmail = GmailAPI.new
+    @gmail.search(params)
+  end 
+
+
 
 end

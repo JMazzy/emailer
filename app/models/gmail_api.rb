@@ -15,12 +15,11 @@ class GmailAPI
     @count = @gmail.inbox.count
   end
 
-
-  def grab_all_unread
+  # reusable method to process whatever gmail query you made
+  def process_emails(emails_obj)
     @arr = []
     @email_objects = []
-    @emails = @gmail.inbox.emails(:from => "julia.herron@gmail.com")
-    @emails.each do |email|
+    emails_obj.each do |email|
       obj = {
         from: email.from[0].name,
         from_email: email.from[0]["mailbox"] + email.from[0]["host"],
@@ -30,7 +29,19 @@ class GmailAPI
       }
       @email_objects << obj
     end
-    @email_objects
+    @email_objects    
+  end
+
+
+  def grab_all_unread
+    emails_obj = @gmail.inbox.emails(:from => "julia.herron@gmail.com")
+    @email_objects = process_emails(emails_obj)
+  end
+
+
+  def search(query)
+    emails = @gmail.inbox.emails(gm: query)
+    @email_objects = process_emails(emails)
   end
 
 
