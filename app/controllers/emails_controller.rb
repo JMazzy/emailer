@@ -10,9 +10,9 @@ class EmailsController < ApplicationController
   def create
     @gmail = GmailAPI.new
     @gmail.send_email(params)
-  end
 
- # "email"=>{"to"=>"you", "subject"=>"board", "description"=>"board"}
+    render json: 201
+  end
 
 
   def search

@@ -51,13 +51,13 @@ class GmailAPI
 
 
   def send_email(object)
-    @gmail.deliver do
-      to "#{object.to}"
-      subject "#{object.subject}"
-      text_part do
-        body "#{object.body}"
-      end
+    email = @gmail.compose do
+      to "#{object["to"]}"
+      subject "#{object["subject"]}"
+      body "#{object["body"]}"
     end
+
+    email.deliver!
   end
 
 
