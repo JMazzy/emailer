@@ -2,12 +2,7 @@ jmail.factory('EmailService', [ 'Restangular', function(Restangular) {
   var obj = {};
 
   var _emailData = {
-    emails: [{  id: 543,
-                from: "Fake Sender",
-                to: "Fake Recipient",
-                subject:"Fake Subject",
-                body: "Fake Body",
-                time: new Date(2016, 1, 1, 1, 1)}],
+    emails: fakeEmails,
     currentEmail: null,
     reply: { id: 544, from: "Me", to: null, subject: null, body: null, time: null },
     requestEmails: function() {
