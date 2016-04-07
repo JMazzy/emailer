@@ -25,6 +25,7 @@ gem 'angularjs-rails'
 gem 'angular_rails_csrf'
 gem 'gmail', '~> 0.6.0'
 gem 'omniauth-google-oauth2', '~> 0.4.1'
+gem 'figaro'
 
 
 group :production do
