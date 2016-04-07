@@ -1,6 +1,6 @@
 jmail.directive('mailDirective', function(){
     return {
-        templateUrl: "app/assets/javascripts/directives/mailDirective.html",
+        templateUrl: "templates/mailDirective.html",
         restrict: "A",
         scope: {
           email: "="
