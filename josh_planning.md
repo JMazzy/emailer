@@ -72,3 +72,13 @@ Questions
 
 Server Side or client side pagination?
 http://www.michaelbromley.co.uk/blog/108/paginate-almost-anything-in-angularjs
+
+
+sign up/in
+
+looking at emails
+
+
+marking emails read/Unread
+
+attachments
