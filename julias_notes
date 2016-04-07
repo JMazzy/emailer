@@ -1,0 +1,57 @@
+Google API: https://developers.google.com/gmail/api/
+
+
+===========================
+GMAIL GEM:
+
+https://github.com/gmailgem/gmail
+
+
+(no gem for Yahoo, but we could get credentials and use Omni-auth gem)
+http://stackoverflow.com/questions/34528983/rails-yahoo-api-for-rails
+
+
+
+=======================
+Mailyt gem is pretty much what we're trying to build:
+
+Gems: devise, ActionMailer
+controllers: emails, email_accounts
+
+
+
+=======================
+BASIC FEATURES:
+
+- sign up/ sign in
+- link gmail account to our mailer
+- receive and send emails
+
+
+ADD-ONS:
+- search emails
+- mark emails unread
+- add attachments (Paperclip, S3?)
+- group emails in folders
+- integrate with other mail servers
+
+
+=========================
+RAILS API
+
+- use devise and current_user architecture?
+- access to email address, password
+- gmail gem is basically a wrapper for gmail API
+- Angular talks to gmail gem that resides in rails
+
+
+
+
+=========================
+ANGULAR FRONTEND?
+
+- on page load, resolve grabs 50 most recent emails
+
+- 'refresh' button makes an API call for new emails
+- directive for each email row?
+- pagination with angularUtils
