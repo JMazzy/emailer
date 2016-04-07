@@ -2,6 +2,10 @@ jmail.controller( 'InboxCtrl', ['$scope', '$state', '$stateParams', 'Restangular
 
   $scope.emailData = EmailService.getEmailData();
 
+  $scope.emailData.requestEmails();
+
+  console.log($scope.emailData.getEmails())
+
   $scope.emails = $scope.emailData.getEmails();
 
   $scope.openEmail = function(email) {
