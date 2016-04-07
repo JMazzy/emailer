@@ -23,6 +23,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass'
 gem 'angularjs-rails'
 gem 'angular_rails_csrf'
+gem 'gmail', '~> 0.6.0'
+gem 'omniauth-google-oauth2', '~> 0.4.1'
 
 
 group :production do
