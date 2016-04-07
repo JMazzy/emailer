@@ -21,6 +21,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 
 gem 'bootstrap-sass'
+gem 'angularjs-rails'
+gem 'angular_rails_csrf'
 
 
 group :production do
