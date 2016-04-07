@@ -2,6 +2,8 @@ jmail.controller( 'EmailCtrl', ['$scope', '$state', '$stateParams', 'Restangular
 
   $scope.emailData = EmailService.getEmailData();
 
+  $scope.emailData.requestEmails();
+
   $scope.emailData.emailFromID( Number($stateParams.id) );
 
   $scope.email = $scope.emailData.getCurrentEmail();
