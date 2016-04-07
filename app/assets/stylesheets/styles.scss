@@ -21,3 +21,11 @@ div.navbar-header > a.navbar-brand:hover, #sign_in:hover, #sign_out:hover {
 div.navbar-header > a.navbar-brand:visited, #sign_in:visited, #sign_out:visited {
   color: #99ccff;
 }
+
+.email {
+  cursor: pointer;
+}
+
+.email:hover {
+  background-color: green;
+}

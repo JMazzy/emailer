@@ -1,0 +1,35 @@
+<section class="row">
+  <section class="col-xs-12">
+
+    <h2>{{ email.subject }}</h2>
+
+  </section>
+</section>
+
+<hr>
+
+<section class="row">
+  <section class="col-xs-12">
+
+    <p>
+      <strong>From:</strong> {{ email.from }}
+    </p>
+
+    <p>
+      <strong>To:</strong> {{ email.to }}
+    </p>
+
+  </section>
+</section>
+
+<hr>
+
+<section class="row">
+  <section class="col-xs-12">
+
+    <p>
+      {{ email.body }}
+    </p>
+
+  </section>
+</section>
