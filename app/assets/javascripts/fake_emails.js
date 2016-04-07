@@ -1,7 +1,7 @@
 var fake_emails = [
   {
     "from": "Julia Herron",
-    "from_email": "julia.herrongmail.com",
+    "from_email": "julia.herron@gmail.com",
     "subject": "Hi!",
     "body": {
       "body": null,
@@ -66,7 +66,7 @@ var fake_emails = [
   },
   {
     "from": "Julia Herron",
-    "from_email": "julia.herrongmail.com",
+    "from_email": "julia.herron@gmail.com",
     "subject": "Wow",
     "body": {
       "body": null,
@@ -131,7 +131,7 @@ var fake_emails = [
   },
   {
     "from": "Julia Herron",
-    "from_email": "julia.herrongmail.com",
+    "from_email": "julia.herron@gmail.com",
     "subject": "Super cool things",
     "body": {
       "body": null,
