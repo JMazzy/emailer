@@ -8,6 +8,8 @@ API (Gmail)
     threads (a message "conversation")
     [Maybe only use messages and labels?]
 
+Or use gmail gem!
+
 Database
   users
     id
@@ -44,4 +46,29 @@ Database
 
 
 Front end
-  
+  Dependencies
+    AngularJS
+    UI Router
+    Restangular
+
+  Navbar w/ sign in/out/up on the top
+  Email list center
+    Newest to oldest
+    pagination
+    Unread - bold
+  One side - categories (labels)
+
+
+
+
+
+Questions
+  * how to handle email retrieval?
+    * rails app gets data in big packages and stores/updates db?
+  * do we even have to store email on our server?
+    * just use rails for users and authentication
+    * make requests to gmail directly from Restangular?
+      * is that secure?
+
+Server Side or client side pagination?
+http://www.michaelbromley.co.uk/blog/108/paginate-almost-anything-in-angularjs
