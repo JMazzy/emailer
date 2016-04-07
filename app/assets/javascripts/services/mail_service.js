@@ -50,5 +50,9 @@ jmail.factory('EmailService', [ 'Restangular', function(Restangular) {
     return _emailData;
   };
 
+  obj.sendEmail = function() {
+    Restangular.all("emails").post(reply)
+  }
+
   return obj;
 }]);

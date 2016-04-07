@@ -15,4 +15,8 @@ jmail.controller( 'EmailCtrl', ['$scope', '$state', '$stateParams', 'Restangular
     $scope.emailData.setCurrentEmail(null);
   }
 
+  $scope.sendEmail = function() {
+    EmailService.sendEmail();
+  }
+
 }]);
