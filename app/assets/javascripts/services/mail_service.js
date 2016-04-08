@@ -23,27 +23,23 @@ jmail.factory('EmailService', [ 'Restangular', function(Restangular) {
       this.emails = emails;
 
       // Restangular.all('emails').getList()
-      // .then( function(  ) {
-      //
-      //
-      //     console.log(rawEmails);
-      //
-      //
-      //     console.log(emails);
-      //
+      // .then( function( rawEmails ) {
       //   }
       // );
-
     },
+
     getEmails: function() {
       return this.emails;
     },
+
     setCurrentEmail: function(email) {
       this.currentEmail = email;
     },
+
     getCurrentEmail: function() {
       return this.currentEmail;
     },
+
     emailFromID: function(id) {
       for ( var i = 0; i < this.emails.length; i++ ) {
         if ( this.emails[i].id === id ) {
@@ -51,12 +47,15 @@ jmail.factory('EmailService', [ 'Restangular', function(Restangular) {
         }
       }
     },
+
     getNewEmail: function() {
       return this.newEmail;
     },
+
     resetNewEmail: function() {
       this.newEmail = { id: 0, from: "Me", to: null, subject: null, body: null, time: null };
     },
+
   };
 
   obj.getEmailData = function() {
