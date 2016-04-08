@@ -6,11 +6,10 @@ jmail.factory('EmailService', [ 'Restangular', function(Restangular) {
     currentEmail: null,
     newEmail: { from: null, to: null, subject: null, body: null, time: null },
     requestEmails: function() {
-      var rawEmails = Restangular.all('emails').getList().$object;
-      // var rawEmails = fake_emails;
       var emails = [];
+      var rawEmails = fake_emails;
       for ( var i = 0; i < rawEmails.length; i++ ) {
-        emails[i] = {
+        emails.push({
           id: i,
           from: rawEmails[i].from,
           from_email: rawEmails[i].from_email,
@@ -18,9 +17,23 @@ jmail.factory('EmailService', [ 'Restangular', function(Restangular) {
           subject: rawEmails[i].subject,
           body: rawEmails[i].body.body_raw,
           date: new Date(rawEmails[i].date),
-        };
+        });
       }
+
       this.emails = emails;
+
+      // Restangular.all('emails').getList()
+      // .then( function(  ) {
+      //
+      //
+      //     console.log(rawEmails);
+      //
+      //
+      //     console.log(emails);
+      //
+      //   }
+      // );
+
     },
     getEmails: function() {
       return this.emails;
